@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>HTML Staff Directory - Jump Start Vue.js</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+	<style>
+		h1.ui.center.header {
+			margin-top: 3em;
+		}
+	</style>
+</head>
+
+<body>
+	<h1 class="ui center aligned header">Staff Directory</h1>
+	<div class="ui container">
+		<table class="ui celled table">
+			<thead>
+				<tr>
+					<th>Avatar</th>
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>Email</th>
+					<th>Phone</th>
+					<th>Department</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/9.jpg" class="ui mini rounded image" />
+					</td>
+					<td>amelia</td>
+					<td>austin</td>
+					<td>amelia.austin@example.com</td>
+					<td>(651)-507-3705</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/79.jpg" class="ui mini rounded image" />
+					</td>
+					<td>bobbie</td>
+					<td>murphy</td>
+					<td>bobbie.murphy@example.com</td>
+					<td>(925)-667-7604</td>
+					<td>Management</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/45.jpg" class="ui mini rounded image" />
+					</td>
+					<td>kristin</td>
+					<td>terry</td>
+					<td>kristin.terry@example.com</td>
+					<td>(021)-544-1184</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/59.jpg" class="ui mini rounded image" />
+					</td>
+					<td>brandon</td>
+					<td>griffin</td>
+					<td>brandon.griffin@example.com</td>
+					<td>(509)-317-9506</td>
+					<td>Management</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/72.jpg" class="ui mini rounded image" />
+					</td>
+					<td>tammy</td>
+					<td>gibson</td>
+					<td>tammy.gibson@example.com</td>
+					<td>(815)-727-0663</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/35.jpg" class="ui mini rounded image" />
+					</td>
+					<td>edward</td>
+					<td>diaz</td>
+					<td>edward.diaz@example.com</td>
+					<td>(164)-374-5203</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/14.jpg" class="ui mini rounded image" />
+					</td>
+					<td>celina</td>
+					<td>jackson</td>
+					<td>celina.jackson@example.com</td>
+					<td>(358)-185-5629</td>
+					<td>Management</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/20.jpg" class="ui mini rounded image" />
+					</td>
+					<td>marion</td>
+					<td>schmidt</td>
+					<td>marion.schmidt@example.com</td>
+					<td>(048)-711-3842</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/52.jpg" class="ui mini rounded image" />
+					</td>
+					<td>jackie</td>
+					<td>fletcher</td>
+					<td>jackie.fletcher@example.com</td>
+					<td>(325)-717-2960</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/93.jpg" class="ui mini rounded image" />
+					</td>
+					<td>vickie</td>
+					<td>jones</td>
+					<td>vickie.jones@example.com</td>
+					<td>(017)-549-4725</td>
+					<td>HR</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/91.jpg" class="ui mini rounded image" />
+					</td>
+					<td>rosa</td>
+					<td>rose</td>
+					<td>rosa.rose@example.com</td>
+					<td>(994)-899-5188</td>
+					<td>HR</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/83.jpg" class="ui mini rounded image" />
+					</td>
+					<td>stacey</td>
+					<td>reyes</td>
+					<td>stacey.reyes@example.com</td>
+					<td>(934)-474-7495</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/6.jpg" class="ui mini rounded image" />
+					</td>
+					<td>nevaeh</td>
+					<td>phillips</td>
+					<td>nevaeh.phillips@example.com</td>
+					<td>(500)-363-3829</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/68.jpg" class="ui mini rounded image" />
+					</td>
+					<td>jeanette</td>
+					<td>walters</td>
+					<td>jeanette.walters@example.com</td>
+					<td>(229)-343-3330</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/29.jpg" class="ui mini rounded image" />
+					</td>
+					<td>sara</td>
+					<td>bell</td>
+					<td>sara.bell@example.com</td>
+					<td>(607)-032-3021</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/33.jpg" class="ui mini rounded image" />
+					</td>
+					<td>lester</td>
+					<td>beck</td>
+					<td>lester.beck@example.com</td>
+					<td>(331)-938-8441</td>
+					<td>Management</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/29.jpg" class="ui mini rounded image" />
+					</td>
+					<td>marion</td>
+					<td>palmer</td>
+					<td>marion.palmer@example.com</td>
+					<td>(968)-500-3203</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/84.jpg" class="ui mini rounded image" />
+					</td>
+					<td>penny</td>
+					<td>chapman</td>
+					<td>penny.chapman@example.com</td>
+					<td>(433)-799-1901</td>
+					<td>Engineering</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/21.jpg" class="ui mini rounded image" />
+					</td>
+					<td>albert</td>
+					<td>mendoza</td>
+					<td>albert.mendoza@example.com</td>
+					<td>(626)-787-6708</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/81.jpg" class="ui mini rounded image" />
+					</td>
+					<td>eugene</td>
+					<td>alexander</td>
+					<td>eugene.alexander@example.com</td>
+					<td>(965)-992-7966</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/8.jpg" class="ui mini rounded image" />
+					</td>
+					<td>brianna</td>
+					<td>pena</td>
+					<td>brianna.pena@example.com</td>
+					<td>(177)-577-2703</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/61.jpg" class="ui mini rounded image" />
+					</td>
+					<td>shane</td>
+					<td>roberts</td>
+					<td>shane.roberts@example.com</td>
+					<td>(578)-689-2670</td>
+					<td>Management</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/95.jpg" class="ui mini rounded image" />
+					</td>
+					<td>raul</td>
+					<td>gilbert</td>
+					<td>raul.gilbert@example.com</td>
+					<td>(513)-804-0780</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/79.jpg" class="ui mini rounded image" />
+					</td>
+					<td>jennie</td>
+					<td>rose</td>
+					<td>jennie.rose@example.com</td>
+					<td>(346)-289-7297</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/26.jpg" class="ui mini rounded image" />
+					</td>
+					<td>richard</td>
+					<td>simmons</td>
+					<td>richard.simmons@example.com</td>
+					<td>(147)-650-9581</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/41.jpg" class="ui mini rounded image" />
+					</td>
+					<td>alberto</td>
+					<td>powell</td>
+					<td>alberto.powell@example.com</td>
+					<td>(423)-042-1027</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/women/15.jpg" class="ui mini rounded image" />
+					</td>
+					<td>julia</td>
+					<td>lawson</td>
+					<td>julia.lawson@example.com</td>
+					<td>(316)-395-5276</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/70.jpg" class="ui mini rounded image" />
+					</td>
+					<td>edgar</td>
+					<td>johnston</td>
+					<td>edgar.johnston@example.com</td>
+					<td>(954)-827-7399</td>
+					<td>Support</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/46.jpg" class="ui mini rounded image" />
+					</td>
+					<td>allen</td>
+					<td>baker</td>
+					<td>allen.baker@example.com</td>
+					<td>(083)-648-3550</td>
+					<td>Sales</td>
+				</tr>
+				<tr>
+					<td>
+						<img src="https://randomuser.me/api/portraits/thumb/men/69.jpg" class="ui mini rounded image" />
+					</td>
+					<td>scott</td>
+					<td>pena</td>
+					<td>scott.pena@example.com</td>
+					<td>(566)-201-1879</td>
+					<td>Support</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+
+</html>
