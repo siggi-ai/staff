@@ -10,12 +10,36 @@
 <body>
     
     <main id="main">
+     
+        <div>
+            <h1 class="ui center aligned header">{{ heading }}</h1>
+            <p>The price is: {{ price * 1.20 }} (inc. VAT)</p>
 
-            <div>
-        <h1 class="ui center aligned header">{{ heading }}</h1>
-        <p>The price is: {{ price * 1.20 }} (inc. VAT)</p>
-        
-            </div>
+            <h2> {{ employees }}</h2>
+            
+            <!-- <tbody>  
+                <tr v-for="employee in employees">    
+                    <td>      <img src="https://randomuser.me/api/portraits/thumb/women/9.jpg" class="ui mini rounded image" />    
+                    </td>    
+                    <td>{{ employee.firstName }}</td>    
+                    <td>{{ employee.lastName }}</td>    
+                    <td>{{ employee.email }}</td>    
+                    <td>{{ employee.phone }}</td>    
+                    <td>{{ employee.department }}</td>  
+                </tr>
+            </tbody> -->
+
+            <!-- <tbody>
+            <tr >
+                <td>{{ employee.firstName }}</td>
+                <td>{{ employee.lastName }}</td>
+                <td>{{ employee.email }}</td>
+                <td>{{ employee.phone }}</td>
+                <td>{{ employee.department }}</td>
+            </tr>
+            </tbody> -->
+        </div>
+
 
     </main>
 
@@ -302,15 +326,6 @@
         }).mount('#main');
     </script>
 
-<tbody>
-    <tr >
-        <td>{{ employee.firstName }}</td>
-        <td>{{ employee.lastName }}</td>
-        <td>{{ employee.email }}</td>
-        <td>{{ employee.phone }}</td>
-        <td>{{ employee.department }}</td>
-    </tr>
-</tbody>
 
 </body>
 </html>
