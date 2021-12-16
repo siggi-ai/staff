@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <main id="main">
+            <div>
+        <h1 class="ui center aligned header">{{ heading }}</h1>
+        <p>The price is: {{ price * 1.20 }}</p>
+            </div>
+    </main>
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    price: 25,
+                    heading: "Staff Directory",
+                    employees: [
+                        {
+                            firstName: "amelia",
+                            lastName: "austin",
+                            photoUrl: "https://randomuser.me/api/portraits/thumb/women/9.jpg",
+                            email: "amelia.austin@example.com",
+                            phone: "(651)-507-3705",
+                            department: "Engineering"
+                        },
+                        {
+                            firstName: "bobbie",
+                            lastName: "murphy",
+                            photoUrl:
+                                "https://randomuser.me/api/portraits/thumb/women/79.jpg",
+                            email: "bobbie.murphy@example.com",
+                            phone: "(925)-667-7604",
+                            department: "Management"
+                        },
+                    ]
+                };
+            }
+        }).mount('#main');
+    </script>
+
+</body>
+</html>
