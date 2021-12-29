@@ -27,13 +27,13 @@
             <table class="table">  
                 <tr>
                     <th>Avatar</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                    <th>Department</th>
+                    <th @click="sortBy = 'firstName'">First Name</th>
+                    <th @click="sortBy = 'lastName'">Last Name</th>
+                    <th @click="sortBy = 'email'">Email</th>
+                    <th @click="sortBy = 'phone'">Phone</th>
+                    <th @click="sortBy = 'department'">Department</th>
                 </tr>
-                <tr v-for="(employee, index) in employees" :key="employee.id">  
+                <tr v-for="(employee, index) in sortedEmployees" :key="index">  
                     <td><img :src="employee.photoUrl"></td>     <!-- v-bind -->
                     <td>{{ employee.firstName }}</td>    
                     <td>{{ employee.lastName }}</td>    
@@ -64,48 +64,49 @@
                     price: 20,
                     heading: "Staff Directory",
                     text: "Good golly, Miss Molly",
+                    sortBy: "firstName",
                     employees: [
                         {
-                            firstName: "amelia",
-                            lastName: "austin",
-                            photoUrl: "https://randomuser.me/api/portraits/thumb/women/9.jpg",
-                            email: "amelia.austin@example.com",
-                            phone: "(651)-507-3705",
-                            department: "Engineering"
+                            "firstName": "amelia",
+                            "lastName": "austin",
+                            "photoUrl": "https://randomuser.me/api/portraits/thumb/women/9.jpg",
+                            "email": "amelia.austin@example.com",
+                            "phone": "(651)-507-3705",
+                            "department": "Engineering"
                         },
                         {
-                            firstName: "bobbie",
-                            lastName: "murphy",
-                            photoUrl: "https://randomuser.me/api/portraits/thumb/women/79.jpg",
-                            email: "bobbie.murphy@example.com",
-                            phone: "(925)-667-7604",
-                            department: "Management"
+                            "firstName": "bobbie",
+                            "lastName": "murphy",
+                            "photoUrl": "https://randomuser.me/api/portraits/thumb/women/79.jpg",
+                            "email": "bobbie.murphy@example.com",
+                            "phone": "(925)-667-7604",
+                            "department": "Management"
                         },
                         {
-                            firstName: "kristin",
-                            lastName: "terry",
-                            photoUrl:
+                            "firstName": "kristin",
+                            "lastName": "terry",
+                            "photoUrl":
                                 "https://randomuser.me/api/portraits/thumb/women/45.jpg",
-                            email: "kristin.terry@example.com",
-                            phone: "(021)-544-1184",
-                            department: "Sales"
+                            "email": "kristin.terry@example.com",
+                            "phone": "(021)-544-1184",
+                            "department": "Sales"
                         },
                         {
-                            firstName: "brandon",
-                            lastName: "griffin",
-                            photoUrl: "https://randomuser.me/api/portraits/thumb/men/59.jpg",
-                            email: "brandon.griffin@example.com",
-                            phone: "(509)-317-9506",
-                            department: "Management"
+                            "firstName": "brandon",
+                            "lastName": "griffin",
+                            "photoUrl": "https://randomuser.me/api/portraits/thumb/men/59.jpg",
+                            "email": "brandon.griffin@example.com",
+                            "phone": "(509)-317-9506",
+                            "department": "Management"
                         },
                         {
-                            firstName: "tammy",
-                            lastName: "gibson",
-                            photoUrl:
+                            "firstName": "tammy",
+                            "lastName": "gibson",
+                            "photoUrl":
                                 "https://randomuser.me/api/portraits/thumb/women/72.jpg",
-                            email: "tammy.gibson@example.com",
-                            phone: "(815)-727-0663",
-                            department: "Support"
+                            "email": "tammy.gibson@example.com",
+                            "phone": "(815)-727-0663",
+                            "department": "Support"
                         },
                         {
                             "firstName": "edward",
@@ -334,16 +335,21 @@
                         }
                     ]
                 };
-            },
+        },
         methods: {
             updateStatus(event) {
+                console.log(event);
                 const buttons = ['left', 'middle', 'right'];
                 this.status = `You clicked the ${buttons[event.button]} mouse button.`;
+            },
+        },
+        computed: {
+            sortedEmployees() {
+                return this.employees.sort((a, b) => a[this.sortBy].localeCompare(b[this.sortBy]))
             }
         }
         }).mount('#main');
     </script>
-
 
 </body>
 <style>
