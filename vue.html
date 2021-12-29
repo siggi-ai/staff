@@ -23,7 +23,7 @@
                     <th>Phone</th>
                     <th>Department</th>
                 </tr>
-                <tr v-for="employee in employees">  
+                <tr v-for="(employee, index) in employees" :key="employee.id">  
                     <td><img src="https://randomuser.me/api/portraits/thumb/women/9.jpg"></td>     
                     <td>{{ employee.firstName }}</td>    
                     <td>{{ employee.lastName }}</td>    
@@ -31,17 +31,17 @@
                     <td>{{ employee.phone }}</td>    
                     <td>{{ employee.department }}</td>  
                 </tr>
+                <tr v-if="employees.length === 0">
+                    <td colspan="6">No employees found</td>
+                </tr>
             </table>
 
-            <!-- <tbody>
-            <tr >
-                <td>{{ employee.firstName }}</td>
-                <td>{{ employee.lastName }}</td>
-                <td>{{ employee.email }}</td>
-                <td>{{ employee.phone }}</td>
-                <td>{{ employee.department }}</td>
-            </tr>
-            </tbody> -->
+            <!-- <table>
+                <tr v-if="empoyees.length === 0">
+                    <td colspan="6">No employees found</td>
+                </tr>
+            </table> -->
+
         </div>
     </main>
 
@@ -53,7 +53,7 @@
                     price: 20,
                     heading: "Staff Directory",
                     employees: [
-                        {
+                        /* {
                             firstName: "amelia",
                             lastName: "austin",
                             photoUrl: "https://randomuser.me/api/portraits/thumb/women/9.jpg",
@@ -319,7 +319,7 @@
                             "email": "scott.pena@example.com",
                             "phone": "(566)-201-1879",
                             "department": "Support"
-                        }
+                        } */
                     ]
                 };
             }
