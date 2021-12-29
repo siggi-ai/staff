@@ -15,7 +15,11 @@
             <p>The price is: {{ price * 1.20 }} (inc. VAT)</p>
             <input v-model="text" type="text">
             <p>Text is: {{ text }}</p>
-            <button v-on:click="heading = 'Hello World!'">Click Me</button>
+            <button @click="heading = 'Hello World!'">Click Me</button> <!-- v-on -->
+            <br>
+            <br>
+            <button @mousedown="updateStatus" @contextmenu.prevent="">Toggle Me</button>
+            <p>{{ status }}</p>
 
             <br>
             <br>
@@ -30,7 +34,7 @@
                     <th>Department</th>
                 </tr>
                 <tr v-for="(employee, index) in employees" :key="employee.id">  
-                    <td><img :src="employee.photoUrl"></td>     
+                    <td><img :src="employee.photoUrl"></td>     <!-- v-bind -->
                     <td>{{ employee.firstName }}</td>    
                     <td>{{ employee.lastName }}</td>    
                     <td>{{ employee.email }}</td>    
@@ -56,6 +60,7 @@
         Vue.createApp({
             data() {
                 return {
+                    status: '',
                     price: 20,
                     heading: "Staff Directory",
                     text: "Good golly, Miss Molly",
@@ -329,7 +334,13 @@
                         }
                     ]
                 };
+            },
+        methods: {
+            updateStatus(event) {
+                const buttons = ['left', 'middle', 'right'];
+                this.status = `You clicked the ${buttons[event.button]} mouse button.`;
             }
+        }
         }).mount('#main');
     </script>
 
