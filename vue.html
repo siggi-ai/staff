@@ -14,19 +14,16 @@
             <h1 class="ui center aligned header">{{ heading }}</h1>
             <p>The price is: {{ price * 1.20 }} (inc. VAT)</p>
 
-            <h2> {{ employees[0] }}</h2>
-
-            <h3 v-for="value in employees">{{ value.firstName }}</h2>
-            
-            <!-- <tbody>  
-                <tr v-for="employee in employees">       
+            <table>  
+                <tr v-for="employee in employees">  
+                    <td><img src="https://randomuser.me/api/portraits/thumb/women/9.jpg"></td>     
                     <td>{{ employee.firstName }}</td>    
                     <td>{{ employee.lastName }}</td>    
                     <td>{{ employee.email }}</td>    
                     <td>{{ employee.phone }}</td>    
                     <td>{{ employee.department }}</td>  
                 </tr>
-            </tbody> -->
+            </table>
 
             <!-- <tbody>
             <tr >
